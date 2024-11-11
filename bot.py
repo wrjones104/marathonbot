@@ -78,7 +78,7 @@ async def sub_messages():
                     else:
                         eventloc = "Online"
                     embed.title = f"{current['name']}"
-                    embed.url = f'https://v1.oengus.io' \
+                    embed.url = f'https://oengus.io' \
                                 f'/marathon/{current["id"]}'
                     if d['description'] and len(d['description']) > 500:
                         embed.description = ''.join([str(d['description'])[0:500], "..."])
