@@ -104,7 +104,10 @@ def create_marathon_embed(marathon, details):
     else:
         event_location = "Online"
 
-    description = details.get('description', 'No description provided.')
+    description = details.get('description')
+    if not description:
+        description = "No description provided."
+
     if len(description) > 500:
         description = description[:500] + "..."
 
